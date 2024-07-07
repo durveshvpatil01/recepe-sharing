@@ -1,1 +1,77 @@
-<p>auth works!</p>
+<div class="flex justify-center h-screen items-center overflow-hidden">
+    <div class="container">
+        <div class="cover" [ngClass]="{'route-active':isRegister}">
+            <div class="front">
+                <img src="https://images.pexels.com/photos/4050078/pexels-photo-4050078.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                alt=""
+                />
+                <div class="text">
+                    <span class="text-1">
+                        Share,Savor, and Create: Your Recipe Haven
+                        Awaits!
+                    </span>
+                    <span>Let's get connected</span>
+                </div>
+                <div class="back">
+                    <img src="https://media.istockphoto.com/id/1707523587/photo/pretty-young-woman-holding-glass-of-green-smoothie-and-eating-vegetable-salad-after-workout.jpg?s=612x612&w=0&k=20&c=y1wW2vmlO1ux2Fb333i0s09RPHq7ofaaNLwpHR8E5lU=" 
+                    alt="">
+                </div>
+            </div>
+        </div>
+        <div class="form h-full">
+            <div class="form-content h-full">
+                <div class="login-form">
+                    <h1 class="text-lg font-blod text-center pb-8">Signup</h1>
+                    <form 
+                    (ngSubmit)="onSubmit()" 
+                    class=""
+                    >
+
+                        <div class="mb-4">
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Title</mat-label>
+                                <input matInput 
+                                placeholder="title" value=""
+                                name="title"
+                                [(ngModel)]="recipeItem.title"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                                />
+                              </mat-form-field>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Description</mat-label>
+                                <input matInput 
+                                placeholder="description" value=""
+                                name="description"
+                                [(ngModel)]="recipeItem.description"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                                />
+                              </mat-form-field>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <mat-form-field class="w-full">
+                                <mat-label class="text-gray-200">Image</mat-label>
+                                <input matInput 
+                                placeholder="Image URL" value=""
+                                name="image"
+                                [(ngModel)]="recipeItem.image"
+                                class="py-2 px-3 text-gray-200 mt-1 focus:shadow-outline"
+                                />
+                              </mat-form-field>
+                        </div>
+                       
+                        <div>
+                            <button mat-raised-button color="primary" type="submit">
+                                Create
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
